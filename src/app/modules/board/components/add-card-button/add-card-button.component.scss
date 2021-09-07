@@ -1,0 +1,21 @@
+.button {
+  color: #5e6c84;
+  width: 70%;
+  margin-left: 9px;
+  margin-bottom: 6px;
+  padding-top: 4px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+
+  .icon {
+    vertical-align: middle;
+    padding-bottom: 4px;
+  }
+}
+
+.button:hover {
+  background-color: #9098a533;
+}

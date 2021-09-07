@@ -1,0 +1,12 @@
+<textarea
+  [formControl]="taskTitle"
+  class="input"
+  placeholder="enter a title for this card..."
+  type="text"
+></textarea>
+<button (click)="submit()" mat-raised-button color="primary" class="add-button">
+  Add card
+</button>
+<button (click)="close()" mat-button>
+  <mat-icon>close</mat-icon>
+</button>

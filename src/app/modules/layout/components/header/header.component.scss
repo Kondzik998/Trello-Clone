@@ -1,0 +1,59 @@
+mat-toolbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  max-height: 40px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.toolbar-logo,
+.toolbar-actions {
+  width: 33.3%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.example-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  height: 34px;
+}
+mat-icon {
+  margin-top: -7px;
+}
+.boards-icon span {
+  margin-left: 5px;
+}
+.logo {
+  font-size: 24px;
+  color: #c6c6c6;
+  transition: all 0.7s ease;
+}
+.logo:hover {
+  background-color: transparent;
+  color: white;
+  transition: all 0.7s ease;
+}
+.search-input {
+  height: 34px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0 0 0 5px;
+  margin: 0;
+  margin-bottom: 2px;
+  border: 0;
+}
+.search-input::placeholder {
+  color: white;
+}
+.search-input:focus {
+  background-color: white;
+  width: 300px;
+}
+.search-input:focus::placeholder {
+  color: black;
+}
+.boards-icon {
+  width: 100px;
+}
+.search-input-container {
+  margin-top: -1px;
+}

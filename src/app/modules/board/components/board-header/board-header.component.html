@@ -1,0 +1,60 @@
+<div class="board-header">
+  <div class="left-buttons">
+    <div class="workspace">
+      <button mat-button class="example-icon">
+        <mat-icon>more_horiz</mat-icon>
+        <span>Board</span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+
+    <div class="kanban-string">
+      <span>Kanban </span>
+    </div>
+
+    <div [class]="colorClass">
+      <button mat-icon-button class="example-icon" (click)="change()">
+        <mat-icon>star_border</mat-icon>
+      </button>
+    </div>
+
+    <div class="workspace">
+      <span class="btn-divider"></span>
+      <span>Private Workspace </span>
+    </div>
+
+    <div class="workspace">
+      <span class="btn-divider"></span>
+      <button mat-button class="example-icon">
+        <mat-icon>lock</mat-icon>
+        <span>Private</span>
+      </button>
+    </div>
+
+    <div class="workspace">
+      <span class="btn-divider"></span>
+      <mat-icon>account_circle</mat-icon>
+      <mat-icon>account_circle</mat-icon>
+      <mat-icon>account_circle</mat-icon>
+      <mat-icon>account_circle</mat-icon>
+      <button mat-button class="example-icon">Invite</button>
+    </div>
+  </div>
+  <div class="right-buttons">
+    <button mat-button class="example-icon">
+      <mat-icon>flash_on</mat-icon>
+      Automation
+    </button>
+    <button
+      *ngIf="!display"
+      mat-button
+      class="example-icon"
+      (click)="onPress()"
+    >
+      <mat-icon>more_horiz</mat-icon>
+      Show Menu
+    </button>
+  <app-board-header-menu *ngIf="display" class="board-menu" (close)="onPress()">
+  </app-board-header-menu>
+  </div>
+</div>

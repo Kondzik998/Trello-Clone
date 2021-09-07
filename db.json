@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "title": "Test 1",
+      "description": "",
+      "status": "Done",
+      "id": 1
+    },
+    {
+      "title": "Task 4",
+      "description": "",
+      "status": "toDo",
+      "id": 2
+    },
+    {
+      "title": "Test 3",
+      "description": "",
+      "status": "toDo",
+      "id": 3
+    },
+    {
+      "title": "Task 2",
+      "description": "",
+      "status": "inProgress",
+      "id": 4
+    },
+    {
+      "title": "Test 5",
+      "description": "",
+      "status": "inProgress",
+      "id": 5
+    },
+    {
+      "title": "Test 6",
+      "description": "",
+      "status": "Done",
+      "id": 6
+    }
+  ]
+}

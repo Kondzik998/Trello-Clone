@@ -1,0 +1,8 @@
+<mat-card
+  cdkDrag
+  [cdkDragData]="state"
+  [matTooltip]="state.description | shortDescription"
+  matTooltipPosition="right"
+>
+  <p>{{ state.title }}</p>
+</mat-card>

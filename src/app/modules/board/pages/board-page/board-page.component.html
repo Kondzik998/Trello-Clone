@@ -1,0 +1,10 @@
+<app-board-header></app-board-header>
+<div cdkDropListGroup class="board-columns" fxLayout="row" fxLayoutAlign="none">
+  <app-board-column
+    *ngFor="let column of columns$ | async"
+    [state]="column"
+    (taskDropped)="onTaskDropped($event)"
+    (taskClicked)="onTaskClicked($event)"
+    (taskAdded)="addTask($event)"
+  ></app-board-column>
+</div>

@@ -1,0 +1,50 @@
+<div class="mat-typography board-column">
+  <div class="board-column-header">
+    <span class="board-column-header-name">{{ state.title }}</span>
+
+    <button mat-icon-button class="dots-icon" [matMenuTriggerFor]="menu">
+      <mat-icon>more_horiz</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Add card...</button>
+      <button mat-menu-item>Copy list...</button>
+      <button mat-menu-item>Move list...</button>
+      <button mat-menu-item>Watch</button>
+      <hr />
+      <button mat-menu-item>Sort by...</button>
+      <hr />
+      <button mat-menu-item>When a card is added to the list...</button>
+      <button mat-menu-item>Every day, sort list by...</button>
+      <button mat-menu-item>Every Monday, sort list by...</button>
+      <button mat-menu-item>Create a custom rule</button>
+      <hr />
+      <button mat-menu-item>Move all cards in this list...</button>
+      <button mat-menu-item>Archive all cards in this list...</button>
+      <hr />
+      <button mat-menu-item>Archive this list</button>
+    </mat-menu>
+  </div>
+  <div
+    class="board-column-content"
+    cdkDropList
+    [cdkDropListData]="state"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <div class="board-column-empty">No tasks.</div>
+    <app-board-task
+      *ngFor="let task of state.tasks"
+      [state]="task"
+      (click)="onClickTask(task)"
+    ></app-board-task>
+  </div>
+  <app-add-card-button
+    *ngIf="!isAddFormOpened; else form"
+    (opened)="this.isAddFormOpened = true"
+  ></app-add-card-button>
+  <ng-template #form
+    ><app-add-card-form
+      (taskAdded)="addTask($event)"
+      (closed)="this.isAddFormOpened = false"
+    ></app-add-card-form
+  ></ng-template>
+</div>
